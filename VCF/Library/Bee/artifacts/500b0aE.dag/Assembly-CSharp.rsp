@@ -340,10 +340,12 @@
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/500b0aE.dag/UnityEngine.XR.LegacyInputHelpers.ref.dll"
 "Assets/Scripts/ContinuousMovement.cs"
+"Assets/Scripts/Gun.cs"
 "Assets/Scripts/HandPresence.cs"
 "Assets/Scripts/LocomotionController.cs"
 "Assets/Scripts/SimpleCameraController.cs"
 "Assets/Scripts/TutorialInfo/Scripts/Readme.cs"
+"Assets/Scripts/XROffsetGrabInteractable.cs"
 -langversion:8.0
 
 /deterministic
