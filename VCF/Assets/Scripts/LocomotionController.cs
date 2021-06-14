@@ -9,7 +9,7 @@ public class LocomotionController : MonoBehaviour
     public XRController rightTeleportRay;
 
     public InputHelpers.Button teleportActivationButton;
-    public float activationThreshold = 1.0f;
+    public float activationThreshold = 0.2f;
 
 
     // Update is called once per frame
