@@ -8,6 +8,8 @@ public class LocomotionController : MonoBehaviour
 
     public XRController rightTeleportRay;
 
+    public XRRayInteractor rightInteractorRay;
+
     public InputHelpers.Button teleportActivationButton;
     public float activationThreshold = 0.2f;
 
@@ -16,9 +18,19 @@ public class LocomotionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 pos = new Vector3();
+        Vector3 norm = new Vector3();
+        int index = 0;
+        bool validTarget = false;
+
+
+
+
         if (rightTeleportRay)
         {
-            rightTeleportRay.gameObject.SetActive(enableRightTeleport && CheckIfActivated(rightTeleportRay));
+
+            bool isRightInteractorHovering = rightInteractorRay.TryGetHitInfo(ref pos, ref norm, ref index, ref validTarget);
+            rightTeleportRay.gameObject.SetActive(enableRightTeleport && CheckIfActivated(rightTeleportRay) && !isRightInteractorHovering);
         }
     }
 
